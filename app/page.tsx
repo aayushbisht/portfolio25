@@ -115,17 +115,19 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Now Status */}
+          {/* Experience Card */}
           <div className="col-span-4">
-            <Card title="Experience" className="h-full">
-              <div className="space-y-1">
-                <p className="text-sm">Currently working fulltime at Accenture</p>
-              </div>
-              <div className="flex mt-6 justify-between items-center text-sm">
-                <span>Full Experience</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </div>
-            </Card>
+            <Link href="/experience">
+              <Card title="Experience" className="h-full group cursor-pointer">
+                <div className="space-y-1">
+                  <p className="text-sm">Currently working fulltime at Accenture</p>
+                </div>
+                <div className="flex mt-6 justify-between items-center text-sm">
+                  <span>Full Experience</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </Card>
+            </Link>
           </div>
 
           {/* Side Projects */}

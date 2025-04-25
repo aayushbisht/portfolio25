@@ -31,3 +31,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #444;
 }
+
+/* Timeline styles */
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
