@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Card from './components/Card';
 import { FaGithub, FaLinkedin, FaDribbble, FaDiscord } from 'react-icons/fa';
 import { BiSolidBookAlt } from 'react-icons/bi';
+import Link from 'next/link';
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState('');
@@ -99,19 +100,19 @@ export default function Home() {
             </Card>
           </div>
 
-          {/* Current Time - Split into two cards */}
+          {/* Current Time and Side Projects */}
           <div className="col-span-4 grid grid-rows-2 gap-3">
             <Card title="" className="h-full flex items-center justify-center">
               <div className="text-xl font-mono">{currentTime}</div>
             </Card>
-            <Card title="Side Projects" className="h-full group cursor-pointer">
-            {/* <p className="text-sm">Currently working fulltime</p> */}
-            <div className="flex justify-between items-center text-sm">
-                <span>View</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </div>
-
-            </Card>
+            <Link href="/projects">
+              <Card title="Side Projects" className="h-full group cursor-pointer">
+                <div className="flex justify-between items-center text-sm">
+                  <span>View</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </Card>
+            </Link>
           </div>
 
           {/* Now Status */}
