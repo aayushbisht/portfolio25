@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useTheme, getThemeClasses } from '../context/ThemeContext';
 
 interface ProjectCardProps {
   title: string;
@@ -13,6 +14,8 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, technologies }: ProjectCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { theme } = useTheme();
+  const themeClasses = getThemeClasses(theme);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -26,7 +29,7 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-6 border border-zinc-800/50"
+      className={`${themeClasses.card} backdrop-blur-sm rounded-2xl p-6 border ${themeClasses.border}`}
     >
       {/* Image Carousel */}
       <div className="relative aspect-video mb-4 rounded-lg overflow-hidden bg-black/20">
@@ -40,15 +43,15 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
         <div className="absolute inset-0 flex items-center justify-between p-2">
           <button
             onClick={previousImage}
-            className="p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+            className={`p-2 rounded-full ${themeClasses.card} hover:opacity-80 transition-opacity`}
           >
-            <FaChevronLeft size={16} />
+            <FaChevronLeft size={16} className={themeClasses.text} />
           </button>
           <button
             onClick={nextImage}
-            className="p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+            className={`p-2 rounded-full ${themeClasses.card} hover:opacity-80 transition-opacity`}
           >
-            <FaChevronRight size={16} />
+            <FaChevronRight size={16} className={themeClasses.text} />
           </button>
         </div>
 
@@ -59,7 +62,7 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
               key={index}
               onClick={() => setCurrentImageIndex(index)}
               className={`w-1.5 h-1.5 rounded-full transition-colors ${
-                index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                index === currentImageIndex ? themeClasses.accent : 'bg-white/50'
               }`}
             />
           ))}
@@ -67,15 +70,15 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
       </div>
 
       {/* Project Info */}
-      <h3 className="text-xl font-medium text-white mb-2">{title}</h3>
-      <p className="text-gray-300 text-sm mb-4">{description}</p>
+      <h3 className={`text-xl font-medium ${themeClasses.text} mb-2`}>{title}</h3>
+      <p className={`${themeClasses.textSecondary} text-sm mb-4`}>{description}</p>
 
       {/* Technologies */}
       <div className="flex flex-wrap gap-2 mb-4">
         {technologies.map((tech) => (
           <span
             key={tech}
-            className="px-2 py-1 text-xs rounded-full bg-white/10 text-gray-300"
+            className={`px-2 py-1 text-xs rounded-full bg-white/10 ${themeClasses.textSecondary}`}
           >
             {tech}
           </span>
@@ -88,7 +91,7 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
+          className={`flex items-center gap-2 text-sm ${themeClasses.textSecondary} hover:${themeClasses.text} transition-colors`}
         >
           <FaGithub size={16} />
           <span>Source</span>
@@ -97,7 +100,7 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
           href={deploymentUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
+          className={`flex items-center gap-2 text-sm ${themeClasses.textSecondary} hover:${themeClasses.text} transition-colors`}
         >
           <FaExternalLinkAlt size={14} />
           <span>Live Demo</span>

@@ -5,8 +5,11 @@ import Card from './components/Card';
 import { FaGithub, FaLinkedin, FaDribbble, FaDiscord } from 'react-icons/fa';
 import { BiSolidBookAlt } from 'react-icons/bi';
 import Link from 'next/link';
+import { useTheme, getThemeClasses } from './context/ThemeContext';
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+  const themeClasses = getThemeClasses(theme);
   const [currentTime, setCurrentTime] = useState('');
 
   useEffect(() => {
@@ -26,15 +29,17 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="h-screen w-screen flex items-center justify-center bg-black p-6">
+    <main className={`h-screen w-screen flex items-center justify-center ${themeClasses.background} p-6 transition-colors duration-300`}>
       <div className="w-[60%] h-[90vh]">
         <div className="grid grid-cols-12 gap-3 h-full auto-rows-[minmax(0,auto)]">
           {/* Welcome Section - Large Card */}
           <div className="col-span-8 row-span-2">
             <Card title="welcome" className="h-full">
               <div className="space-y-3">
-                <h2 className="text-2xl font-medium">Hi, I'm <span className="font-bold">Aayush Bisht</span>,</h2>
-                <p className="text-base text-gray-300">
+                <h2 className={`text-2xl font-medium ${themeClasses.text}`}>
+                  Hi, I&apos;m <span className="font-bold">Aayush Bisht</span>,
+                </h2>
+                <p className={themeClasses.textSecondary}>
                   a software developer with strong focus on the user experience, animations and micro interactions.
                 </p>
                 {/* <p className="text-base text-gray-300">
@@ -53,10 +58,11 @@ export default function Home() {
                   <a href="#" className="bg-black/30 p-2 rounded-lg hover:bg-black/50 transition-colors">
                     <BiSolidBookAlt size={20} />
                   </a>
-                  <button className="bg-white text-black px-4 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                  <button className={`${themeClasses.accent} text-black px-4 rounded-lg text-sm font-medium hover:opacity-90 transition-colors`}>
                     Get Resume
                   </button>
                 </div>
+            
               </div>
             </Card>
           </div>
@@ -93,7 +99,8 @@ export default function Home() {
                   <h3 className="text-gray-400 text-xs">Contact Details</h3>
                   <p>aayushbisht501@gmail.com</p>
                 </div>
-                <button className="bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+              
+                  <button className={`${themeClasses.accent} text-black py-2 px-4 rounded-lg text-sm font-medium hover:opacity-90 transition-colors`}>
                     Contact Me
                   </button>
               </div>
@@ -104,6 +111,28 @@ export default function Home() {
           <div className="col-span-4 grid grid-rows-2 gap-3">
             <Card title="" className="h-full flex items-center justify-center">
               <div className="text-xl font-mono">{currentTime}</div>
+              <div className="flex gap-2 mt-4">
+                  <button
+                    onClick={() => setTheme('black')}
+                    className={`w-4 h-4 rounded-full bg-black transition-transform ${theme === 'black' ? 'scale-150' : ''}`}
+                  />
+                  <button
+                    onClick={() => setTheme('gray')}
+                    className={`w-4 h-4 rounded-full bg-gray-400 transition-transform ${theme === 'gray' ? 'scale-150' : ''}`}
+                  />
+                  <button
+                    onClick={() => setTheme('red')}
+                    className={`w-4 h-4 rounded-full bg-red-500 transition-transform ${theme === 'red' ? 'scale-150' : ''}`}
+                  />
+                  <button
+                    onClick={() => setTheme('yellow')}
+                    className={`w-4 h-4 rounded-full bg-yellow-500 transition-transform ${theme === 'yellow' ? 'scale-150' : ''}`}
+                  />
+                  <button
+                    onClick={() => setTheme('blue')}
+                    className={`w-4 h-4 rounded-full bg-blue-500 transition-transform ${theme === 'blue' ? 'scale-150' : ''}`}
+                  />
+                </div>
             </Card>
             <Link href="/projects">
               <Card title="Side Projects" className="h-full group cursor-pointer">

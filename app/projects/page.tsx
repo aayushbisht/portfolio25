@@ -1,6 +1,7 @@
 'use client';
 
 import ProjectCard from '../components/ProjectCard';
+import { useTheme, getThemeClasses } from '../context/ThemeContext';
 
 const projects = [
   {
