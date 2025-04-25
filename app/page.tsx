@@ -32,7 +32,7 @@ export default function Home() {
           <div className="col-span-8 row-span-2">
             <Card title="welcome" className="h-full">
               <div className="space-y-3">
-                <h2 className="text-2xl font-medium">Hi, I'm <span className="font-bold">Your Name</span>,</h2>
+                <h2 className="text-2xl font-medium">Hi, I'm <span className="font-bold">Aayush Bisht</span>,</h2>
                 <p className="text-base text-gray-300">
                   a software developer with strong focus on the user experience, animations and micro interactions.
                 </p>
@@ -53,7 +53,7 @@ export default function Home() {
                     <BiSolidBookAlt size={20} />
                   </a>
                   <button className="bg-white text-black px-4 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
-                    Book a call
+                    Get Resume
                   </button>
                 </div>
               </div>
@@ -64,15 +64,21 @@ export default function Home() {
           <div className="col-span-4 row-span-2">
             <Card title="About me" className="h-full">
               <div className="space-y-2">
-                <p className="text-sm">Hi, I'm a front-end software developer from Italy.</p>
+                <p className="text-sm">Hi, I'm a full-stack software developer from India.</p>
                 <p className="text-xs text-gray-400">My primary tools of choice includes:</p>
                 <ul className="list-none space-y-0.5 text-sm">
-                  <li>• JavaScript</li>
+                  <li>• Nextjs</li>
+                  <li>• Typescript</li>
                   <li>• React</li>
-                  <li>• Solidjs</li>
-                  <li>• Astro</li>
-                  <li>• Svelte</li>
+                  <li>• Typescript</li>
+                  <li>• Tailwind CSS</li>
                   <li>• Nodejs</li>
+                  <li>• Express</li>
+                  <li>• Solidity</li>
+                  <li>• Git</li>
+                  <li>• Github</li>
+                  <li>• GCP</li>
+                  
                 </ul>
               </div>
             </Card>
@@ -81,65 +87,78 @@ export default function Home() {
           {/* Let's work together */}
           <div className="col-span-4">
             <Card title="Let's start working together!" className="h-full">
-              <div className="space-y-2 text-sm">
+              <div className="space-y-10 text-sm">
                 <div>
                   <h3 className="text-gray-400 text-xs">Contact Details</h3>
-                  <p>contact@example.com</p>
-                  <p>Italy</p>
+                  <p>aayushbisht501@gmail.com</p>
                 </div>
+                <button className="bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                    Contact Me
+                  </button>
               </div>
             </Card>
           </div>
 
-          {/* Current Time */}
-          <div className="col-span-4">
+          {/* Current Time - Split into two cards */}
+          <div className="col-span-4 grid grid-rows-2 gap-3">
             <Card title="" className="h-full flex items-center justify-center">
               <div className="text-xl font-mono">{currentTime}</div>
+            </Card>
+            <Card title="Side Projects" className="h-full group cursor-pointer">
+            {/* <p className="text-sm">Currently working fulltime</p> */}
+            <div className="flex justify-between items-center text-sm">
+                <span>View</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+
             </Card>
           </div>
 
           {/* Now Status */}
           <div className="col-span-4">
-            <Card title="Now" className="h-full">
+            <Card title="Experience" className="h-full">
               <div className="space-y-1">
-                <p className="text-xs text-gray-400">what's that ?</p>
-                <p className="text-sm">Currently working fulltime</p>
+                <p className="text-sm">Currently working fulltime at Accenture</p>
               </div>
-            </Card>
-          </div>
-
-          {/* Design Works */}
-          <div className="col-span-4">
-            <Card title="Design Works" className="h-full group cursor-pointer">
-              <div className="flex justify-between items-center text-sm">
-                <span>View gallery</span>
+              <div className="flex mt-6 justify-between items-center text-sm">
+                <span>Full Experience</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </Card>
           </div>
 
+          {/* Side Projects */}
+          {/* <div className="col-span-4">
+            <Card title="Side Projects" className="h-full group cursor-pointer">
+              <div className="flex justify-between items-center text-sm">
+                <span>View</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </Card>
+          </div> */}
+
           {/* Playground */}
-          <div className="col-span-4">
+          {/* <div className="col-span-4">
             <Card title="Playground" className="h-full group cursor-pointer">
               <div className="flex justify-between items-center text-sm">
                 <span>View experiments</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </Card>
-          </div>
+          </div> */}
 
           {/* Blog */}
-          <div className="col-span-4">
+          {/* <div className="col-span-4">
             <Card title="Blog" className="h-full group cursor-pointer">
               <div className="flex justify-between items-center text-sm">
                 <span>Read articles</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </Card>
-          </div>
+          </div> */}
 
           {/* Works */}
-          <div className="col-span-4">
+          {/* <div className="col-span-4">
             <Card title="Works" className="h-full group cursor-pointer">
               <div className="flex justify-between items-center text-sm">
                 <span>View projects</span>
@@ -148,20 +167,20 @@ export default function Home() {
                 </div>
               </div>
             </Card>
-          </div>
+          </div> */}
 
           {/* Countries Map */}
-          <div className="col-span-8">
+          {/* <div className="col-span-8">
             <Card title="Countries I visited" className="h-full group cursor-pointer">
               <div className="flex justify-between items-center text-sm">
                 <span>View map</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </Card>
-          </div>
+          </div> */}
 
           {/* Footer */}
-          <div className="col-span-4">
+          {/* <div className="col-span-4">
             <Card title="" className="h-full flex items-center justify-center">
               <div className="flex gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
@@ -171,7 +190,7 @@ export default function Home() {
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
               </div>
             </Card>
-          </div>
+          </div> */}
         </div>
       </div>
     </main>
