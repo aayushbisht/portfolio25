@@ -1,10 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Card from './components/shared/Card';
-import { FaGithub, FaLinkedin, FaDribbble, FaDiscord } from 'react-icons/fa';
-import { BiSolidBookAlt } from 'react-icons/bi';
-import Link from 'next/link';
+import { useState } from 'react';
 import { useTheme, getThemeClasses } from './context/ThemeContext';
 import ContactModal from './components/ContactModal';
 import ExperienceCard from './components/ExperienceCard';
@@ -13,29 +9,12 @@ import AboutMe from './components/AboutMe';
 import WorkTogether from './components/WorkTogether';
 import SideProjects from './components/SideProjects';
 import ThemeTime from './components/ThemeTime';
-import Button from './components/shared/Button';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
   const themeClasses = getThemeClasses(theme);
-  const [currentTime, setCurrentTime] = useState('');
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setCurrentTime(now.toLocaleTimeString('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false,
-        timeZone: 'Asia/Kolkata'
-      }) + ' IST');
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <main className={`h-screen w-screen flex items-center justify-center ${themeClasses.background} p-6 transition-colors duration-300`}>
@@ -50,7 +29,6 @@ export default function Home() {
             <ThemeTime />
             <SideProjects />
           </div>
-
           <ExperienceCard />
 
           {/* Side Projects */}

@@ -4,38 +4,38 @@ import TimelineCard from '../components/shared/TimelineCard';
 
 const experiences = [
   {
-    title: 'Senior Software Engineer',
+    title: 'Associate Software Engineer',
     company: 'Accenture',
-    duration: '2022 - Present',
+    duration: 'Oct 2024 - Present',
     description: [
-      'Leading development of enterprise-scale applications using React and Node.js',
-      'Mentoring junior developers and conducting code reviews',
-      'Implementing CI/CD pipelines and maintaining code quality standards',
-      'Collaborating with cross-functional teams to deliver high-impact solutions'
+      'Developed and optimized SAP ABAP solutions, improving system performance by 20% and reducing processing time',
+      'Designed and implemented custom reports, forms, and interfaces for seamless SAP module integration.',
+      'Performed performance tuning and troubleshooting to enhance efficiency and minimize system downtime.',
     ],
-    technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'Docker']
+    technologies: ['SAP ABAP', 'SAP HANA', 'SAP Fiori', 'SAP UI5', 'SAP Cloud Platform']
   },
   {
-    title: 'Software Engineer',
-    company: 'Previous Company',
-    duration: '2020 - 2022',
+    title: 'Full Stack Developer Intern',
+    company: 'Tutcart',
+    duration: 'Jan 2024 - Mar 2024',
     description: [
-      'Developed and maintained multiple web applications',
-      'Implemented responsive designs and improved user experience',
-      'Worked with agile methodologies and participated in sprint planning'
+      'Built REST APIs and managed dashboards using Next.js, enhancing backend efficiency by 25%',
+      'Developed map-based search, improving user satisfaction by 30%.',
+      'Implemented Redux, boosting app performance by 20%',
+      'Designed landing page, increasing user engagement.'
     ],
-    technologies: ['React', 'JavaScript', 'CSS', 'Git', 'REST APIs']
+    technologies: ['Next.js', 'TypeScript', 'Material UI','MongoDB', 'Git', 'REST APIs']
   },
   {
-    title: 'Junior Developer',
-    company: 'First Company',
-    duration: '2018 - 2020',
+    title: 'Full Stack Developer Intern',
+    company: 'Graphic Era University',
+    duration: 'Jul 2023 - Aug 2023',
     description: [
-      'Built and maintained client websites',
-      'Collaborated with designers to implement pixel-perfect designs',
-      'Optimized website performance and SEO'
+      'Developed an application EduLink that facilitates connections between Colleges and Companies using MongoDB, Express.js, React.js, Node.js',
+      'Achieved reduction in usertime by consolidating comprehensive college and company information onto a unified platform',
+      
     ],
-    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL']
+    technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Web Sockets']
   }
 ];
 
