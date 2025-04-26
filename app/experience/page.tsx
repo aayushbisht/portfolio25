@@ -1,6 +1,7 @@
 'use client';
 
 import TimelineCard from '../components/shared/TimelineCard';
+import { useTheme, getThemeClasses } from '../context/ThemeContext';
 
 const experiences = [
   {
@@ -33,31 +34,32 @@ const experiences = [
     description: [
       'Developed an application EduLink that facilitates connections between Colleges and Companies using MongoDB, Express.js, React.js, Node.js',
       'Achieved reduction in usertime by consolidating comprehensive college and company information onto a unified platform',
-      
     ],
     technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Web Sockets']
   }
 ];
 
 export default function ExperiencePage() {
+  const { theme } = useTheme();
+  const themeClasses = getThemeClasses(theme);
+
   return (
-    <main className="min-h-screen bg-black p-6">
+    <main className={`min-h-screen ${themeClasses.background} p-6`}>
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-12">
-          <h1 className="text-3xl font-bold text-white">Experience</h1>
+          <h1 className={`text-3xl font-bold ${themeClasses.text}`}>Experience</h1>
           <button
             onClick={() => window.history.back()}
-            className="text-gray-400 hover:text-white transition-colors"
+            className={`${themeClasses.textSecondary} hover:${themeClasses.text} transition-colors`}
           >
             ← Back
           </button>
         </div>
 
         <div className="relative">
-          {/* Center line - visible only on md and above */}
           <div className="hidden md:block absolute left-1/2 top-8 bottom-0 w-0.5 bg-gradient-to-b from-white/90 via-white/30 to-transparent"></div>
 
-          <div className="space-y-8">
+          <div className="space-y-12">
             {experiences.map((experience, index) => (
               <TimelineCard
                 key={index}

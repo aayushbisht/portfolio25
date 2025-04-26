@@ -51,7 +51,7 @@ const WelcomeCard = () => {
             </span>
           </div>
           <p className={themeClasses.textSecondary}>
-            with strong focus on the user experience, animations and micro interactions.
+          with a strong focus on user experience and a passion for solving complex problems across the stack.
           </p>
           
           <div className="flex gap-3 mt-4">
