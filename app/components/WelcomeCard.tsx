@@ -100,7 +100,7 @@ const WelcomeCard = () => {
 
           <div className={`mt-6 p-4 rounded-lg bg-black/30 ${themeClasses.text}`}>
             <p className="text-sm italic">
-              "Turning complex problems into simple, beautiful, and intuitive solutions."
+              &quot;Turning complex problems into simple, beautiful, and intuitive solutions.&quot;
             </p>
           </div>
         </div>
