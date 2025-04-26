@@ -6,11 +6,13 @@ import { FaGithub, FaLinkedin, FaDribbble, FaDiscord } from 'react-icons/fa';
 import { BiSolidBookAlt } from 'react-icons/bi';
 import Link from 'next/link';
 import { useTheme, getThemeClasses } from './context/ThemeContext';
+import ContactModal from './components/ContactModal';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
   const themeClasses = getThemeClasses(theme);
   const [currentTime, setCurrentTime] = useState('');
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     const updateTime = () => {
@@ -100,7 +102,10 @@ export default function Home() {
                   <p>aayushbisht501@gmail.com</p>
                 </div>
               
-                  <button className={`${themeClasses.accent} text-black py-2 px-4 rounded-lg text-sm font-medium hover:opacity-90 transition-colors`}>
+                  <button 
+                    onClick={() => setIsContactModalOpen(true)}
+                    className={`${themeClasses.accent} text-black py-2 px-4 rounded-lg text-sm font-medium hover:opacity-90 transition-colors`}
+                  >
                     Contact Me
                   </button>
               </div>
@@ -225,6 +230,10 @@ export default function Home() {
           </div> */}
         </div>
       </div>
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </main>
   );
 }
