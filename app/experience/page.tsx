@@ -1,6 +1,6 @@
 'use client';
 
-import TimelineCard from '../components/TimelineCard';
+import TimelineCard from '../components/shared/TimelineCard';
 
 const experiences = [
   {

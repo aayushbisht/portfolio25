@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { useTheme, getThemeClasses } from '../context/ThemeContext';
+import { useTheme, getThemeClasses } from '../../context/ThemeContext';
 
 interface ProjectCardProps {
   title: string;

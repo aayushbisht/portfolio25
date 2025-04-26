@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
-import { useTheme, getThemeClasses } from '../context/ThemeContext';
+import { useTheme, getThemeClasses } from '../../context/ThemeContext';
 
 interface CardProps {
   title: string;

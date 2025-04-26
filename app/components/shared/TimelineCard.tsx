@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useTheme, getThemeClasses } from '../context/ThemeContext';
+import { useTheme, getThemeClasses } from '../../context/ThemeContext';
 
 interface TimelineCardProps {
   title: string;
