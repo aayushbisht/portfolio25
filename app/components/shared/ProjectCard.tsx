@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useTheme, getThemeClasses } from '../../context/ThemeContext';
 
@@ -33,10 +34,14 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
     >
       {/* Image Carousel */}
       <div className="relative aspect-video mb-4 rounded-lg overflow-hidden bg-black/20">
-        <img
+        <Image
           src={images[currentImageIndex]}
           alt={`${title} screenshot ${currentImageIndex + 1}`}
-          className="object-cover w-full h-full"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover"
+          priority={currentImageIndex === 0}
+          loading={currentImageIndex === 0 ? 'eager' : 'lazy'}
         />
         
         {/* Carousel Controls */}
