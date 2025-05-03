@@ -5,35 +5,40 @@ import { useTheme, getThemeClasses } from '../context/ThemeContext';
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'A modern web application built with Next.js and TypeScript, featuring real-time updates and a responsive design.',
+    title: 'SmartPrep',
+    description: 'An AI-powered interview platform with feedback',
     images: [
-      '/project1-1.jpg',
-      '/project1-2.jpg',
-      '/project1-3.jpg',
+      '/interview1.png',
+      '/interview2.png',
+      '/interview3.png',
+      '/interview4.png'
     ],
     githubUrl: 'https://github.com/yourusername/project1',
     deploymentUrl: 'https://project1.demo.com',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js'],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Firebase', 'VAPI', 'Google AI SDK'],
   },
   {
-    title: 'Project 2',
-    description: 'A blockchain-based decentralized application (dApp) built with Solidity and React.',
+    title: 'Places',
+    description: 'Platform to explore cities with AI guide',
     images: [
-      '/project2-1.jpg',
-      '/project2-2.jpg',
+      '/places.png',
+      '/places2.png',
+      '/places3.png',
+      '/places4.png',
+      '/places5.png',
     ],
     githubUrl: 'https://github.com/yourusername/project2',
     deploymentUrl: 'https://project2.demo.com',
-    technologies: ['React', 'Solidity', 'Web3.js', 'Ethereum'],
+    technologies: ['Next.js', 'Typescript', 'Tailwind CSS', 'Google Maps Platform APIs and SDKs', 'Google AI SDK'],
   },
 
   {
-    title: 'Project 2',
-    description: 'A blockchain-based decentralized application (dApp) built with Solidity and React.',
+    title: 'Roadmapper',
+    description: 'AI powered platform to generate roadmaps for building anything',
     images: [
-      '/project2-1.jpg',
-      '/project2-2.jpg',
+      '/road1.png',
+      '/road2.png',
+      '/road3.png',
     ],
     githubUrl: 'https://github.com/yourusername/project2',
     deploymentUrl: 'https://project2.demo.com',
