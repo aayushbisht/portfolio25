@@ -8,7 +8,11 @@ export default function Loading() {
 
   return (
     <div className={`fixed inset-0 ${themeClasses.background} flex items-center justify-center z-50`}>
-      <div className={`w-16 h-16 border-4 border-t-transparent ${themeClasses.accent} rounded-full animate-spin`}></div>
+      <div className="flex space-x-2">
+        <div className={`w-3 h-3 ${themeClasses.accent} rounded-full animate-bounce [animation-delay:-0.3s]`}></div>
+        <div className={`w-3 h-3 ${themeClasses.accent} rounded-full animate-bounce [animation-delay:-0.15s]`}></div>
+        <div className={`w-3 h-3 ${themeClasses.accent} rounded-full animate-bounce`}></div>
+      </div>
     </div>
   );
 } 

@@ -101,7 +101,7 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
           <FaGithub size={16} />
           <span>Source</span>
         </a>
-        <a
+        {deploymentUrl &&( <a
           href={deploymentUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -109,7 +109,8 @@ const ProjectCard = ({ title, description, images, githubUrl, deploymentUrl, tec
         >
           <FaExternalLinkAlt size={14} />
           <span>Live Demo</span>
-        </a>
+        </a>)}
+       
       </div>
     </motion.div>
   );

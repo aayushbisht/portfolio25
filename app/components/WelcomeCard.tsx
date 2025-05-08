@@ -12,7 +12,7 @@ const WelcomeCard = () => {
   const themeClasses = getThemeClasses(theme);
   const [typedText, setTypedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const roles = ['Software Developer', 'UI/UX Enthusiast', 'Problem Solver'];
+  const roles = ['Software Developer', 'UI/UX Enthusiast', 'Problem Solver', 'Full Stack Developer'];
   const [currentRole, setCurrentRole] = useState(0);
 
   useEffect(() => {
@@ -51,22 +51,22 @@ const WelcomeCard = () => {
             </span>
           </div>
           <p className={themeClasses.textSecondary}>
-          with a strong focus on user experience and a passion for solving complex problems across the stack.
+          with a passion for solving real world problems and building end to end solutions.
           </p>
           
           <div className="flex gap-3 mt-4">
-            <a href="#" className="bg-black/30 p-2 rounded-lg hover:bg-black/50 transition-colors">
+            <a href="https://github.com/aayushbisht" target="_blank" rel="noopener noreferrer" className="bg-black/30 p-2 rounded-lg hover:bg-black/50 transition-colors">
               <FaGithub size={20} />
             </a>
-            <a href="#" className="bg-black/30 p-2 rounded-lg hover:bg-black/50 transition-colors">
+            <a href="https://www.linkedin.com/in/aayush-bisht-94a130228/" target="_blank" rel="noopener noreferrer" className="bg-black/30 p-2 rounded-lg hover:bg-black/50 transition-colors">
               <FaLinkedin size={20} />
             </a>
-            <a href="#" className="bg-black/30 p-2 rounded-lg hover:bg-black/50 transition-colors">
+            {/* <a href="#" className="bg-black/30 p-2 rounded-lg hover:bg-black/50 transition-colors">
               <FaDribbble size={20} />
             </a>
             <a href="#" className="bg-black/30 p-2 rounded-lg hover:bg-black/50 transition-colors">
               <BiSolidBookAlt size={20} />
-            </a>
+            </a> */}
             <Button buttonType="resume" />
           </div>
 
@@ -75,7 +75,7 @@ const WelcomeCard = () => {
             <div className={`p-4 rounded-lg bg-black/30 ${themeClasses.text}`}>
               <div className="flex items-center gap-2 mb-2">
                 <FaCode className="text-blue-500" />
-                <span className="font-medium">1.5+ Years</span>
+                <span className="font-medium">1+ Years</span>
               </div>
               <p className="text-xs opacity-70">Experience</p>
             </div>
