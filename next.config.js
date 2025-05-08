@@ -15,10 +15,11 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     scrollRestoration: true,
   },
   transpilePackages: ['sonner'],
+  output: 'standalone',
 };
 
 module.exports = nextConfig;
