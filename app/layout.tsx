@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from './context/ThemeContext'
@@ -10,11 +10,15 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#000000',
+}
+
 export const metadata: Metadata = {
   title: 'My Portfolio',
   description: 'A modern portfolio website showcasing my skills and projects',
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#000000',
 }
 
 export default function RootLayout({
