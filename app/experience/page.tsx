@@ -9,9 +9,9 @@ const experiences = [
     company: 'Accenture',
     duration: 'Oct 2024 - Present',
     description: [
-      'Developed and optimized SAP ABAP solutions, improving system performance by 20% and reducing processing time',
-      'Designed and implemented custom reports, forms, and interfaces for seamless SAP module integration.',
-      'Performed performance tuning and troubleshooting to enhance efficiency and minimize system downtime.',
+      'Developed minor UI updates and controlled form components for an existing internal web portal using React.js and Next.js',
+      'Connected frontend interfaces to pre-existing Node.js/Express REST APIs to fetch and display tabular data, utilizing Postman to verify response',
+      'Resolved 30+ assigned UI defects and cross-browser rendering issues tracked via Jira, specifically targeting complex state-management bugs within two-week sprint cycles',
     ],
     technologies: ['SAP ABAP', 'SAP HANA', 'SAP Fiori', 'SAP UI5', 'SAP Cloud Platform']
   },

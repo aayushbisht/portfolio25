@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'My Portfolio',
+  title: 'Aayush Bisht',
   description: 'A modern portfolio website showcasing my skills and projects',
 }
 
