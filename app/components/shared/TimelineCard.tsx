@@ -6,7 +6,7 @@ interface TimelineCardProps {
   company: string;
   duration: string;
   description: string[];
-  technologies: string[];
+  // technologies: string[];
   isLeft: boolean;
 }
 
@@ -38,14 +38,14 @@ const TimelineCard = ({ title, company, duration, description, technologies, isL
           </div>
 
           <div className="flex flex-wrap gap-2 mt-4">
-            {technologies.map((tech) => (
+            {/* {technologies.map((tech) => (
               <span
                 key={tech}
                 className={`px-2 py-1 text-xs rounded-full bg-white/5 ${themeClasses.textSecondary}`}
               >
                 {tech}
               </span>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

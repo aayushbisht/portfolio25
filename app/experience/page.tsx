@@ -13,7 +13,7 @@ const experiences = [
       'Connected frontend interfaces to pre-existing Node.js/Express REST APIs to fetch and display tabular data, utilizing Postman to verify response',
       'Resolved 30+ assigned UI defects and cross-browser rendering issues tracked via Jira, specifically targeting complex state-management bugs within two-week sprint cycles',
     ],
-    technologies: ['Next.js', 'Reach.js', 'Express', '', 'SAP Cloud Platform']
+    technologies: ['Next.js', 'React.js', 'Express', 'Mongo DB']
   },
   {
     title: 'Full Stack Developer Intern',
@@ -25,6 +25,7 @@ const experiences = [
       'Implemented Redux, boosting app performance by 20%',
       'Designed landing page, increasing user engagement.'
     ],
+    technologies: ['Next.js', 'React.js', 'Express', 'Mongo DB']
   },
   {
     title: 'Full Stack Developer Intern',
@@ -34,6 +35,7 @@ const experiences = [
       'Developed an application EduLink that facilitates connections between Colleges and Companies using MongoDB, Express.js, React.js, Node.js',
       'Achieved reduction in usertime by consolidating comprehensive college and company information onto a unified platform',
     ],
+    technologies: ['Next.js', 'React.js', 'Express', 'Mongo DB']
   }
 ];
 

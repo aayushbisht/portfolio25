@@ -28,7 +28,7 @@ export default function Button({
   const handleClick = () => {
     if (buttonType === 'resume') {
       
-      window.open('/aayush_bisht.pdf', '_blank');
+      window.open('/Aayush_B.pdf', '_blank');
     } else {
       onClick?.();
     }
