@@ -7,7 +7,7 @@ const AboutMe = () => {
   const themeClasses = getThemeClasses(theme)
 
   return (
-    <div className="col-span-4 row-span-2">
+    <div className="col-span-12 md:col-span-6 lg:col-span-4 row-span-1 lg:row-span-2">
       <Card title="About me" className="h-full">
         <div className="space-y-2">
           <p className={`text-sm ${themeClasses.text}`}>Hi, I&apos;m a full-stack software developer from India.</p>

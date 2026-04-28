@@ -5,7 +5,7 @@ import Card from './shared/Card'
 const ExperienceCard = () => {
 
   return (
-        <div className="col-span-4">
+        <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <Link href="/experience">
               <Card title="Experience" className="h-full group cursor-pointer">
                 <div className="space-y-1">

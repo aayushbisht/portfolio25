@@ -12,7 +12,7 @@ const WorkTogether = ({ onContactClick }: WorkTogetherProps) => {
   const themeClasses = getThemeClasses(theme);
 
   return (
-    <div className="col-span-4">
+    <div className="col-span-12 md:col-span-6 lg:col-span-4">
       <Card title="Let's start working together!" className="h-full">
         <div className="space-y-10 text-sm">
           <div>

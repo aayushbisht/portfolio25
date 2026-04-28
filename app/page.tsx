@@ -11,15 +11,15 @@ const ContactModal = dynamic(() => import('./components/ContactModal'), {
 });
 
 const WelcomeCard = dynamic(() => import('./components/WelcomeCard'), {
-  loading: () => <div className="col-span-8 row-span-2 h-full bg-black/30 rounded-2xl animate-pulse" />
+  loading: () => <div className="col-span-12 md:col-span-6 lg:col-span-8 row-span-2 h-40 lg:h-full bg-black/30 rounded-2xl animate-pulse" />
 });
 
 const AboutMe = dynamic(() => import('./components/AboutMe'), {
-  loading: () => <div className="col-span-4 row-span-2 h-full bg-black/30 rounded-2xl animate-pulse" />
+  loading: () => <div className="col-span-12 md:col-span-6 lg:col-span-4 row-span-2 h-40 lg:h-full bg-black/30 rounded-2xl animate-pulse" />
 });
 
 const WorkTogether = dynamic(() => import('./components/WorkTogether'), {
-  loading: () => <div className="col-span-4 h-full bg-black/30 rounded-2xl animate-pulse" />
+  loading: () => <div className="col-span-12 md:col-span-6 lg:col-span-4 h-32 bg-black/30 rounded-2xl animate-pulse" />
 });
 
 const SideProjects = dynamic(() => import('./components/SideProjects'), {
@@ -36,22 +36,22 @@ export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
-    <main className={`h-screen w-screen flex items-center justify-center ${themeClasses.background} p-6 transition-colors duration-300`}>
-      <div className="w-[60%] h-[90vh]">
+    <main className={`min-h-screen w-screen flex items-center justify-center ${themeClasses.background} p-4 md:p-6 transition-colors duration-300`}>
+      <div className="w-full md:w-[90%] xl:w-[70%] 2xl:w-[60%] lg:h-[90vh]">
         <div className="grid grid-cols-12 gap-3 h-full auto-rows-[minmax(0,auto)]">
-          <Suspense fallback={<div className="col-span-8 row-span-2 h-full bg-black/30 rounded-2xl animate-pulse" />}>
+          <Suspense fallback={<div className="col-span-12 md:col-span-6 lg:col-span-8 row-span-2 h-40 lg:h-full bg-black/30 rounded-2xl animate-pulse" />}>
             <WelcomeCard />
           </Suspense>
           
-          <Suspense fallback={<div className="col-span-4 row-span-2 h-full bg-black/30 rounded-2xl animate-pulse" />}>
+          <Suspense fallback={<div className="col-span-12 md:col-span-6 lg:col-span-4 row-span-2 h-40 lg:h-full bg-black/30 rounded-2xl animate-pulse" />}>
             <AboutMe />
           </Suspense>
           
-          <Suspense fallback={<div className="col-span-4 h-full bg-black/30 rounded-2xl animate-pulse" />}>
+          <Suspense fallback={<div className="col-span-12 md:col-span-6 lg:col-span-4 h-32 bg-black/30 rounded-2xl animate-pulse" />}>
             <WorkTogether onContactClick={() => setIsContactModalOpen(true)} />
           </Suspense>
 
-          <div className="col-span-4 grid grid-rows-2 gap-3">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 grid grid-rows-2 gap-3">
             <Suspense fallback={<div className="h-full bg-black/30 rounded-2xl animate-pulse" />}>
               <ThemeTime />
             </Suspense>

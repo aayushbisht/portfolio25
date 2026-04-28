@@ -37,7 +37,7 @@ const WelcomeCard = () => {
   }, [currentIndex, currentRole]);
 
   return (
-    <div className="col-span-8 row-span-2">
+    <div className="col-span-12 md:col-span-6 lg:col-span-8 row-span-1 lg:row-span-2">
       <Card title="welcome" className="h-full">
         <div className="space-y-3">
           <h2 className={`text-2xl font-medium ${themeClasses.text}`}>
