@@ -7,11 +7,11 @@ const experiences = [
   {
     title: 'Associate Software Engineer',
     company: 'Accenture',
-    duration: 'Oct 2024 - Present',
+    duration: 'Oct 2024 - Apr 2026',
     description: [
-      'Developed minor UI updates and controlled form components for an existing internal web portal using React.js and Next.js',
-      'Connected frontend interfaces to pre-existing Node.js/Express REST APIs to fetch and display tabular data, utilizing Postman to verify response',
-      'Resolved 30+ assigned UI defects and cross-browser rendering issues tracked via Jira, specifically targeting complex state-management bugs within two-week sprint cycles',
+      'Delivered 10+ controlled form components and UI features for an internal web portal using React.js and Next.js, reducing manual data entry errors and improving form submission reliability across teams.',
+      'Integrated frontend dashboards with Node.js/Express REST APIs to surface real-time tabular data for internal users, validating all endpoints via Postman and cutting manual data reconciliation time for the ops team',
+      'Diagnosed and resolved 30+ complex state-management and cross-browser rendering bugs within two-week Agile sprint cycles, conducting code reviews and ensuring responsive design consistency across browsers.',
     ],
     technologies: ['Next.js', 'React.js', 'Express', 'Mongo DB']
   },

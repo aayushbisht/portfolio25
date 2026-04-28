@@ -75,7 +75,7 @@ const WelcomeCard = () => {
             <div className={`p-4 rounded-lg bg-black/30 ${themeClasses.text}`}>
               <div className="flex items-center gap-2 mb-2">
                 <FaCode className="text-blue-500" />
-                <span className="font-medium">1+ Years</span>
+                <span className="font-medium">1.5+ Years</span>
               </div>
               <p className="text-xs opacity-70">Experience</p>
             </div>
